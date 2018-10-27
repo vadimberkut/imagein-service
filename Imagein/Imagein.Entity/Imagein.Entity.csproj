@@ -5,10 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="Dto\" />
-    <Folder Include="Enums\" />
     <Folder Include="ValidationAttributes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Imagein.NUlid\Imagein.NUlid.csproj" />
   </ItemGroup>
 
 </Project>

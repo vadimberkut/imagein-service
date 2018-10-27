@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Imagein.Entity.Entities.Base;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Imagein.Data.Repositories.Interface
 {
-    public interface IRepositoryBase<T> where T : class
+    public interface IRepositoryBase<T> where T : class, IBaseEntity
     {
         /// <summary>
         /// Get all entities of type T

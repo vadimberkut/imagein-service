@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Imagein.Entity.Entities.Base
 {
-    public class BaseEntity
+    public class BaseEntity : IBaseEntity
     {
         public BaseEntity()
         {

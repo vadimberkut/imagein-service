@@ -12,9 +12,15 @@ namespace Imagein.Data.Repositories.Base
     {
         private readonly ApplicationDbContext dbContext;
 
-        public UnitOfWork(ApplicationDbContext dbContext)
+
+        public IFileRepository FileRepository { get; }
+
+
+        public UnitOfWork(ApplicationDbContext dbContext, IFileRepository fileRepository)
         {
             this.dbContext = dbContext;
+
+            FileRepository = fileRepository;
         }
 
         public void Commit()

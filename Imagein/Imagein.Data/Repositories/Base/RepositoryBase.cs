@@ -1,5 +1,6 @@
 ﻿using Imagein.Data.DbContexts;
 using Imagein.Data.Repositories.Interface;
+using Imagein.Entity.Entities.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Text;
 
 namespace Imagein.Data.Repositories.Base
 {
-    public class RepositoryBase<T> : IRepositoryBase<T> where T : class
+    public class RepositoryBase<T> : IRepositoryBase<T> where T : class, IBaseEntity
     {
         private ApplicationDbContext dbContext;
         protected DbSet<T> dbSet;

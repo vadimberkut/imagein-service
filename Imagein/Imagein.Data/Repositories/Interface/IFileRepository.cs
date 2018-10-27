@@ -4,12 +4,7 @@ using System.Text;
 
 namespace Imagein.Data.Repositories.Interface
 {
-    public interface IUnitOfWork
+    public interface IFileRepository
     {
-        IFileRepository FileRepository { get; }
-
-
-        void Commit();
-        void Reject();
     }
 }

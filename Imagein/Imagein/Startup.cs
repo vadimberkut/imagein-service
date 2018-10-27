@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Imagein.Data.DbContexts;
+using Imagein.Data.Repositories;
+using Imagein.Data.Repositories.Base;
+using Imagein.Data.Repositories.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,6 +36,10 @@ namespace Imagein
             services.AddDbContext<ApplicationDbContext>(options => {
                 options.UseNpgsql(sqlConnectionString, b => b.MigrationsAssembly(migrationAssembly));
             });
+
+
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IFileRepository, FileRepository>();
 
             services
                 .AddMvc()

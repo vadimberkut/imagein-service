@@ -6,6 +6,8 @@ using Imagein.Data.DbContexts;
 using Imagein.Data.Repositories;
 using Imagein.Data.Repositories.Base;
 using Imagein.Data.Repositories.Interface;
+using Imagein.Services;
+using Imagein.Services.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -40,6 +42,7 @@ namespace Imagein
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IFileRepository, FileRepository>();
+            services.AddTransient<IFileService, FileService>();
 
             services
                 .AddMvc()

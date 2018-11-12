@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Controllers\AdminApi\" />
     <Folder Include="Filters\" />
-    <Folder Include="Services\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -17,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Imagein.Common\Imagein.Common.csproj" />
     <ProjectReference Include="..\Imagein.Data\Imagein.Data.csproj" />
   </ItemGroup>
 

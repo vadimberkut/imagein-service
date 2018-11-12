@@ -15,6 +15,7 @@ namespace Imagein.Entity.Entities
 
         /// <summary>
         /// Local path to the file (including file name)
+        /// E.g. /files/20181023/images/asdasd_ktty.jpg
         /// </summary>
         public string Path { get; set; }
 
@@ -24,9 +25,14 @@ namespace Imagein.Entity.Entities
         public string Url { get; set; }
 
         /// <summary>
-        /// Physical file name
+        /// Original file name
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Physical file name
+        /// </summary>
+        public string PhysicalName { get; set; }
         public string MimeType { get; set; }
         public int Size { get; set; }
 
